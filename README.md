@@ -50,4 +50,4 @@ We welcome contributions from the community! Here's how you can get started:
 1. **Fork the Repository**: Fork the project repository to your GitHub account.
 2. **Clone the Repository**: Clone the forked repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/UDHAARIYA.git
+   git clone https://github.com/ihaseebullah/Uhaariya-FS.git

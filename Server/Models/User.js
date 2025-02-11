@@ -9,7 +9,7 @@ const UserSchema = new mongoose.Schema({
     address: String,
     OTP: { type: String },
     isVerified: { type: Boolean, default: false },
-    VFCP: { type: Boolean, default: false }, // Verified for change password
+    VFCP: { type: Boolean, default: false }, 
     lastPasswordChangedOn: { type: Date, default: new Date() },
     linkedEmails: [String],
     FCM: String
@@ -18,7 +18,6 @@ const UserSchema = new mongoose.Schema({
     versionKey: false
 });
 
-// Middleware to hash password before saving
 UserSchema.pre('save', async function (next) {
     if (this.isModified('password') || this.isNew) {
         try {
@@ -33,12 +32,10 @@ UserSchema.pre('save', async function (next) {
     }
 });
 
-// Method to compare password during login
 UserSchema.methods.comparePassword = function (candidatePassword) {
     return bcrypt.compare(candidatePassword, this.password);
 };
 
-// Create the model
 const USER = mongoose.model('USER', UserSchema);
 
 module.exports = USER;

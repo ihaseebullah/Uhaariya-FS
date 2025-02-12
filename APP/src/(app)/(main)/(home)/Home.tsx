@@ -1,3 +1,4 @@
+<<<<<<< HEAD:APP/src/(app)/(main)/(home)/Home.tsx
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {useTheme} from '../../../Theme/Context/Theme';
@@ -23,15 +24,23 @@ const Home: React.FC<HomeProps> = ({}) => {
       color: Colors.Secondary,
     },
   });
+=======
+import {View, Text} from 'react-native';
+import React from 'react';
+import {useTheme} from '../Theme/Context/Theme';
+>>>>>>> parent of c393bef (Boilerplate setted up):APP/src/(app)/Landing.tsx
 
+const Landing = () => {
+  const {Colors, isDarkMode} = useTheme();
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>
-        Current Theme: {isDarkMode ? 'Dark' : 'Light'}
-      </Text>
-      <TouchableOpacity onPress={toggleTheme} style={styles.btn}>
-        <Text style={styles.text}>{!isDarkMode ? 'Dark' : 'Light'}</Text>
-      </TouchableOpacity>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: Colors.Primary,
+      }}>
+      <Text>Current Theme: {isDarkMode ? 'Dark' : 'Light'}</Text>
     </View>
   );
 };

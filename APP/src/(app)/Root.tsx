@@ -1,12 +1,14 @@
-import {View, Text} from 'react-native';
-import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import Home from './(main)/(home)/Home';
+import { StatusBar } from 'react-native';
 
-const Root = () => {
+const Stack = createStackNavigator();
+
+export const Root = () => {
   return (
-    <View>
-      <Text>Root</Text>
-    </View>
+    <Stack.Navigator>
+      <StatusBar backgroundColor="#6200EE" barStyle="light-content" />
+      <Stack.Screen name="Home" component={Home} />
+    </Stack.Navigator>
   );
 };
-
-export default Root;

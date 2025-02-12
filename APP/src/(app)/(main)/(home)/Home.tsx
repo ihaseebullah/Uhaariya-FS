@@ -1,8 +1,8 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {useTheme} from '../Theme/Context/Theme';
-interface LandingProps {}
-const Landing: React.FC<LandingProps> = () => {
+import {useTheme} from '../../../Theme/Context/Theme';
+interface HomeProps {}
+const Home: React.FC<HomeProps> = ({}) => {
   const {Colors, isDarkMode, toggleTheme} = useTheme();
 
   const styles = StyleSheet.create({
@@ -36,4 +36,4 @@ const Landing: React.FC<LandingProps> = () => {
   );
 };
 
-export default Landing;
+export default Home;
